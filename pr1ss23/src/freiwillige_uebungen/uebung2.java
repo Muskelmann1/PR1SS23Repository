@@ -11,7 +11,7 @@ public class uebung2 {
 		
 		for(int i = 0; i<input.length(); i++) {
 			char currentChar = input.charAt(i);
-			if(currentChar.equals(I)) {
+			if(input == "Hallo") {
 				System.out.println("correct!");
 			}
 			else {
