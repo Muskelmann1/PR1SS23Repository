@@ -7,9 +7,9 @@ public class Fahrenheit {
 	public static void main(String[] args) {
 		
 		// Benötigte Variablen deklarieren
-				double epsilon = 1.005;
+				double epsilon = 0.005;
 				double f = 0.0, c;
-				int out = 0;
+				int out = 2;
 				
 				// Für die Eingabe von der Tastatur
 				Scanner in = new Scanner(System.in);
@@ -26,9 +26,11 @@ public class Fahrenheit {
 						// Ausgabe des Ergebnis
 						System.out.println("... in Celsius: " + c + " Grad \n");
 						
-						if (f > epsilon) {
-							if (f < 1) {
+						// Überprüfung ob f = 1 ist mit der Toleranz von epsilon
+						if (Math.abs(f) < (1+epsilon)) {
+							if (Math.abs(f) > (1-epsilon)) {
 								out = 0;
+								System.out.println("out");
 							}
 						}
 						else {
