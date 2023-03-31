@@ -27,16 +27,15 @@ public class Fahrenheit {
 						System.out.println("... in Celsius: " + c + " Grad \n");
 						
 						// Überprüfung ob f = 1 ist mit der Toleranz von epsilon
-						if (Math.abs(f) < (1+epsilon)) {
-							if (Math.abs(f) > (1-epsilon)) {
+						if (f < (1+epsilon)) {
+							if (f > (1-epsilon)) {
 								out = 0;
-								System.out.println("out");
 							}
 						}
 						else {
 							out = 2;
 						}
-						// Schleife durch Eingabe von 1 verlassen?
+						// Schleife durch Eingabe von 1 verlassen
 						} while (Math.abs(out) > 1);
 					
 						System.out.println("... und tschüss");
