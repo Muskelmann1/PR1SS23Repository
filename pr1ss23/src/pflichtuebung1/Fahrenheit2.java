@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Fahrenheit2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// Benötigte Variablen deklarieren
 				double epsilon = 0.005;
 				double f = 0.0, c;
