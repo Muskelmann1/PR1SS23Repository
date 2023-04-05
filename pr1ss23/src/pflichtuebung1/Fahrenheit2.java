@@ -2,14 +2,14 @@ package pflichtuebung1;
 
 import java.util.Scanner;
 
-public class Fahrenheit {
+public class Fahrenheit2 {
 
 	public static void main(String[] args) {
-		
+		// TODO Auto-generated method stub
 		// Benötigte Variablen deklarieren
 				double epsilon = 0.005;
 				double f = 0.0, c;
-				int out = 2;
+				double exit = 0.0;
 				
 				// Für die Eingabe von der Tastatur
 				Scanner in = new Scanner(System.in);
@@ -21,24 +21,19 @@ public class Fahrenheit {
 						System.out.println("Eingabe der Fahrenheit-Temperatur: ");
 						// Eingabe, Double-Wert einlesen
 						f = in.nextDouble();
-						// Umrechnen in Fahrenheit
+						// Umrechnen in Celsius
 						c = (f -32)*5.0/9.0;
 						// Ausgabe des Ergebnis
 						System.out.println("... in Celsius: " + c + " Grad \n");
 						
-						// Überprüfung ob f = 1 ist mit der Toleranz von epsilon
-						if (f < (1+epsilon)) {
-							if (f > (1-epsilon)) {
-								out = 0;
-							}
-						}
-						else {
-							out = 2;
-						}
-						// Schleife durch Eingabe von 1 verlassen
-						} while (Math.abs(out) > 1);
+						//exit = f-1;
+						
+						// Schleife durch Eingabe von 0 verlassen?
+						} while (Math.abs(f-1) > epsilon);
 					
 						System.out.println("... und tschüss");
 						in.close();
-	}
-}
+			}
+
+		}
+
